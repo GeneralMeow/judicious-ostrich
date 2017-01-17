@@ -1,9 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const path = require('path')
+// const { getAllItems } = require('')
 
-/* GET home page. */
+const db = require('../database')
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  db.getAllItems()
+  .then( todo => {
+    res.render('index', { todo })
+  })
+
 });
 
 module.exports = router;
