@@ -1,13 +1,13 @@
-const express = require('express');
+const express = require( 'express' );
 const router = express.Router();
-const path = require('path')
+const path = require( 'path' )
 const db = require( '../database' )
 
-router.get('/', function(req, res, next) {
+router.get( '/', function( req, res, next ) {
   //setting title variable
   db.getAllItems()
-    .then(todoList => {
-      res.render('index', {todoList, title: 'Best todo app'})
+    .then( todoList => {
+      res.render( 'index', { todoList, title: 'Best todo app' })
     })
 })
 
