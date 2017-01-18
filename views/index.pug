@@ -3,9 +3,6 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-
   ul
-    each val in todo
-      li = val
-    else
-      li There are no values
+    for val in todoList
+      div= val.task
