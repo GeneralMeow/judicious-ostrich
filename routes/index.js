@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require( 'express' );
+const router = express.Router();
+const path = require( 'path' )
+const db = require( '../database' )
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get( '/', function( req, res, next ) {
+  //setting title variable
+  db.getAllItems()
+    .then( todoList => {
+      res.render( 'index', { todoList, title: 'Best todo app' })
+    })
+})
 
 module.exports = router;

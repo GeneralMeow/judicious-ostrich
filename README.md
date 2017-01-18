@@ -22,16 +22,16 @@ The artifact produced is properly licensed, preferably with the [Set artifact](h
 
 
 ### Additional Specs:
-- [ ] Create the back end using node and Express.
-- [ ] Create the front end using Pug.
-- [ ] Create a database of to do list items using PostgreSQL.
+- [x] Create the back end using node and Express.
+- [x] Create the front end using Pug.
+- [x] Create a database of to do list items using PostgreSQL.
 - [ ] Follow good Git team behaviors (do all your work on branches & submit pull requests for review before merging to master).
 - [x] The artifact produced is properly licensed, preferably with the MIT license.
 
 ### Stretch Goals:
 - [ ] I can create multiple lists of to do's.
 - [ ] I can log into my account.
-- [ ] Write the app using ES6 and deploy using babel.
+- [x] Write the app using ES6.
 - [ ] Deploy the app to heroku/AWS.
 
 
