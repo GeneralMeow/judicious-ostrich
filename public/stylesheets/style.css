@@ -1,6 +1,13 @@
 body {
+  background-color: rgb(217, 217, 217);
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+.wrapper {
+  background: url("/images/plant.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 a {

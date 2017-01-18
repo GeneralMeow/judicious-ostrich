@@ -3,6 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  ul
-    for val in todoList
-      div= val.task
+  .wrapper
+    form(method='POST', action='/')
+      input(type='text', name='item', placeholder='Add Task')
+      button(type='submit') Submit
+
+    form(method='POST', action='/delete')
+      button(type="submit") Delete archived items
+      ul
+        for val in todoList
+          input(type='checkbox', id="checkbox"+val.id, name=val.id)
+          div=val.task
