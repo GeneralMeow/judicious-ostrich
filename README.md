@@ -25,7 +25,7 @@ The artifact produced is properly licensed, preferably with the [Set artifact](h
 - [x] Create the back end using node and Express.
 - [x] Create the front end using Pug.
 - [x] Create a database of to do list items using PostgreSQL.
-- [ ] Follow good Git team behaviors (do all your work on branches & submit pull requests for review before merging to master).
+- [x] Follow good Git team behaviors (do all your work on branches & submit pull requests for review before merging to master).
 - [x] The artifact produced is properly licensed, preferably with the MIT license.
 
 ### Stretch Goals:
@@ -38,7 +38,7 @@ The artifact produced is properly licensed, preferably with the [Set artifact](h
 ## Daily goals
 | Mon | Tues | Wed | Thurs | Fri | Sat |Sun|
 ------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------
-||Setup environment; setup database |Setup template and routes to create, update & delete| Improve front end; checkoff items as complete; sort list|Complete sort list; Deploy to AWS||
+||Setup environment; setup database |Setup template and routes to create and update| Set up route to delete, improve front end; checkoff items as complete; sort list|Complete sort list; Deploy to AWS||
   Time|0 hrs|5 hrs|5 hrs|0 hrs|0 hrs|TBD|TBD
 
 
