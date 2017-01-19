@@ -1,8 +1,51 @@
 body {
+  background: url("/images/plant.jpg") no-repeat center center fixed;
+  background-size: cover;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #fff;
 }
+
+.wrapper {
+  background-color: rgba(217, 217, 217, .3);
+  border-radius: 10px;
+
+}
+#listToggle {
+  display: flex;
+  flex-direction: row;
+}
+.clickedOn {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.edit {
+  display: flex;
+  display: none;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.display{
+  display: flex;
+}
+
+.hidden{
+  display:none;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+}
+
 
 a {
   color: #00B7FF;
+}
+
+.isComplete {
+  margin-left: 10px;
 }

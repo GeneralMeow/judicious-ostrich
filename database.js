@@ -7,4 +7,13 @@ const db = pgp( CONNECTION_STRING )
 const getAllItems = () =>
   db.any( "SELECT * FROM item ORDER BY list_order" )
 
-module.exports = { getAllItems }
+const addItem = task =>
+  db.oneOrNone( "INSERT INTO item (task) VALUES ($1)", [ task ])
+
+const removeTask = ids =>
+  db.manyOrNone( "DELETE FROM item WHERE id IN ($1:csv)", [ ids ])
+
+const updateItems = ( newTask, id ) =>
+  db.oneOrNone( "UPDATE item SET task=$1 WHERE id=$2", [ newTask, id ])
+
+  module.exports = { getAllItems, addItem, removeTask, updateItems }
