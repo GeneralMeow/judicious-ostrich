@@ -45,3 +45,7 @@ li {
 a {
   color: #00B7FF;
 }
+
+.isComplete {
+  margin-left: 10px;
+}

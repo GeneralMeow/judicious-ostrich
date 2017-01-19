@@ -8,11 +8,11 @@ block content
       input(type='text', name='item', placeholder='Add Task')
       button(type='submit') Submit
     form(method='POST', action='/delete')
-      button(type="submit") Delete archived items
+      button(type="submit") Delete Items
       ul
         for val in todoList
           #listToggle
-            input(type = 'checkbox', id='checkbox'+val.id, name=val.id)
+            input(type = 'checkbox', id='checkbox'+val.id, name="idList", value=val.id)
             .clickedOn.item(data-id=val.id)
               .clickedOn.item__heading(data-id=val.id, data-completed=val.is_complete)
                 .clickedOn.item__toggle(aria-hidden='true', data-id=val.id, data-completed=val.is_complete)
@@ -20,6 +20,7 @@ block content
                 .clickedOn.span(data-id=val.id)=val.task
             .edit.input.item__edit-title(data-id=val.id, type='text', name='edit-title', value=val.task)
               .item__description(data-id=val.id)
-                form(method='POST', action='/', class='edit')
+                form(method='POST', action='/'+ val.id, class='edit')
                   input(type='text', name='item', placeholder=val.task)
                   button(type='submit') Submit
+            button(class='isComplete', type= 'submit') Complete!
