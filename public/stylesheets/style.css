@@ -1,15 +1,37 @@
 body {
-  background-color: rgb(217, 217, 217);
+  background: url("/images/plant.jpg") no-repeat center center fixed;
+  background-size: cover;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #fff;
 }
 
 .wrapper {
-  background: url("/images/plant.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background-color: rgba(217, 217, 217, .3);
+  border-radius: 10px;
+
 }
 
+#edit{
+  display: none;
+}
+
+.display{
+  display: flex;
+}
+
+.hidden{
+  display:none;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+}
+
+form li div {
+  margin-left: 1%;
+}
 a {
   color: #00B7FF;
 }

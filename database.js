@@ -11,5 +11,9 @@ const addItems = task =>
   db.oneOrNone( "INSERT INTO item (task) VALUES ($1)", [ task ])
 
 const removeTask = ids =>
-  db.manyOrNone( "DELETE FROM item WHERE id IN ($1:csv)", [ ids ])  
-module.exports = { getAllItems, addItems, removeTask }
+  db.manyOrNone( "DELETE FROM item WHERE id IN ($1:csv)", [ ids ])
+
+const updateItems = ( newTask, id ) =>
+  db.oneOrNone( "UPDATE item SET task=$1 WHERE id=$2", [ newTask, id ])
+
+  module.exports = { getAllItems, addItems, removeTask, updateItems }
