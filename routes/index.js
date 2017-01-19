@@ -15,8 +15,8 @@ router.post( '/', function( req, res, next ) {
   db.addItem(item).then(() => res.redirect( '/'))
 })
 
-router.post( '/delete', function( req, res, next ) {
-  const idList = Object.keys(req.body)
+router.post( '/delete/', function( req, res, next ) {
+  const {idList} = Object.keys(req.body)
   db.removeTask(idList).then(() => res.redirect('/'))
 })
 
