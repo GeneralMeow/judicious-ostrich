@@ -1,9 +1,10 @@
-$(document).ready( () => {
-  const displayedInput = $('#edit')
+$(document).ready(function() {
 
-  $('#clickedon').on('click', () => {
-      displayedInput.addId
-  })
+  $( '.clickedOn' ).click( function () {
+    $('.clickedOn').addClass('hidden');
+    $( '.edit' ).addClass('display');
+  });
+
 
   // $('.item__toggle').on('click', function(){
   //     var item = $('form .input-new-item');
@@ -21,4 +22,4 @@ $(document).ready( () => {
   //     return false;
   // });
 
-})
+});

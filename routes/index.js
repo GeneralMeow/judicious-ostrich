@@ -12,7 +12,7 @@ router.get( '/', function( req, res, next ) {
 
 router.post( '/', function( req, res, next ) {
   const { item } = req.body
-  db.addItems(item).then(() => res.redirect( '/'))
+  db.addItem(item).then(() => res.redirect( '/'))
 })
 
 router.post( '/delete', function( req, res, next ) {
@@ -23,7 +23,7 @@ router.post( '/delete', function( req, res, next ) {
 router.post( '/:id', function( req, res, next ) {
   const id = req.params.id
   const newTask = req.body
-  db.removeTask(idList).then(() => res.redirect('/'))
+  db.updateItems(idList).then(() => res.redirect('/'))
 })
 
 module.exports = router;

@@ -11,9 +11,21 @@ body {
   border-radius: 10px;
 
 }
+#listToggle {
+  display: flex;
+  flex-direction: row;
+}
+.clickedOn {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
 
-#edit{
+.edit {
+  display: flex;
   display: none;
+  flex-direction: row;
+  cursor: pointer;
 }
 
 .display{
