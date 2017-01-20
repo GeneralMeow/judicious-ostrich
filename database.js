@@ -16,4 +16,7 @@ const removeTask = ids =>
 const updateItems = ( newTask, id ) =>
   db.oneOrNone( "UPDATE item SET task=$1 WHERE id=$2", [ newTask, id ])
 
-  module.exports = { getAllItems, addItem, removeTask, updateItems }
+const updateCompletion = (id, completed) =>
+  db.none( "UPDATE item SET is_complete=$2 WHERE id=$1", [ id, completed ])
+
+  module.exports = { getAllItems, addItem, removeTask, updateItems, updateCompletion }

@@ -22,11 +22,20 @@ router.post( '/delete', function( req, res, next ) {
     .then(() => res.redirect('/'))
 })
 
-router.post( '/:id', function( req, res, next ) {
-  const id = req.params.id
-  const newTask = req.body.item
+router.post( '/edit', function( req, res, next ) {
+  console.log('edit');
+  const id = req.body.id
+  const newTask = req.body.newToDo
   db.updateItems(newTask, id)
     .then(() => res.redirect('/'))
+})
+
+router.post( '/completed', (request, response) => {
+  const { id } = request.params
+  const { completed } = request.body
+
+  db.updateCompletion( id, completed )
+    .then( result => response.json({ message: `${id} completed` }) )
 })
 
 module.exports = router;

@@ -2,25 +2,41 @@ body {
   background: url("/images/plant.jpg") no-repeat center center fixed;
   background-size: cover;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica", Helvetica, Arial, sans-serif;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wrapper {
-  background-color: rgba(217, 217, 217, .3);
+  background-color: rgba(0, 0, 0, .4);
   border-radius: 10px;
-
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
 }
+
 #listToggle {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
+
 .clickedOn {
   display: flex;
   flex-direction: row;
   cursor: pointer;
 }
 
+.completedGreen{
+  color: green;
+}
+
+.fa{
+  margin-left: 10px;
+  cursor: pointer;
+}
 .edit {
   display: flex;
   display: none;
@@ -30,6 +46,11 @@ body {
 
 .display{
   display: flex;
+}
+
+.item{
+  display: flex;
+  justify-content: center;
 }
 
 .hidden{
@@ -48,4 +69,42 @@ a {
 
 .isComplete {
   margin-left: 10px;
+}
+
+.rowWidth{
+  width: 25%;
+}
+
+.checkBoxContainer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkBox{
+  margin-right: 5%;
+}
+
+.addTaskInput {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+
+.buttonPadding {
+  margin: 0% 0% 0% 2%;
+}
+
+.deleteContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.deleteButton {
+  width: 15%;
+  align-self: center;
+}
+
+.strikethrough{
+  text-decoration: line-through;
 }
