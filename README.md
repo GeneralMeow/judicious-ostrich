@@ -16,7 +16,7 @@ Level the project correctly into stretch zone (Goldilocks Status: Achievement Un
 The artifact produced is properly licensed, preferably with the [Set artifact](https://github.com/eobaah/judicious-ostrich).
 - [x] I can create to do list items.
 - [x] I can delete unwanted to do list items.
-- [ ] I can check items off as completed.
+- [X] I can check items off as completed.
 - [x] I can edit the text on existing to do's.
 - [ ] I can rearrange to do list items.
 
@@ -38,7 +38,7 @@ The artifact produced is properly licensed, preferably with the [Set artifact](h
 ## Daily goals
 | Mon | Tues | Wed | Thurs | Fri | Sat |Sun|
 ------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------
-||Setup environment; setup database |Setup template and routes to create and update| Set up route to delete, improve front end; checkoff items as complete; sort list|Complete sort list; Deploy to AWS||
+||Setup environment; setup database |Setup template and routes to create and update| Set up route to delete, improve front end; checkoff items as complete|Continue with delete and completed items||
   Time|0 hrs|5 hrs|5 hrs|0 hrs|0 hrs|TBD|TBD
 
 
