@@ -2,25 +2,65 @@ body {
   background: url("/images/plant.jpg") no-repeat center center fixed;
   background-size: cover;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica", Helvetica, Arial, sans-serif;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wrapper {
-  background-color: rgba(217, 217, 217, .3);
+  background-color: rgba(0, 0, 0, .4);
   border-radius: 10px;
-
+  width: 50%;
+  padding: 2%;
+  flex-direction: column;
 }
+
+#title {
+  text-align: left;
+  font-size: 3em;
+}
+#subTitle {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.woody {
+background: url("/images/wood-button.jpg") no-repeat center center fixed;
+background-size: contain;
+border-radius: 5px;
+width: 50px;
+padding: 0 4%;
+color: #fff;
+cursor: pointer;
+}
+
+
 #listToggle {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  font-size: .75em;
 }
+
 .clickedOn {
   display: flex;
   flex-direction: row;
   cursor: pointer;
 }
 
+.completedGreen{
+  color: green;
+}
+
+.uncompleteBlack {
+  color: black;
+}
+.fa{
+  margin-left: 10px;
+  cursor: pointer;
+}
 .edit {
   display: flex;
   display: none;
@@ -32,20 +72,55 @@ body {
   display: flex;
 }
 
+.item{
+  display: flex;
+  justify-content: center;
+}
+
 .hidden{
   display:none;
 }
 
-li {
-  display: flex;
-  flex-direction: row;
-}
-
-
-a {
-  color: #00B7FF;
-}
-
 .isComplete {
   margin-left: 10px;
+}
+
+.rowWidth{
+  width: 25%;
+}
+
+.checkBoxContainer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkBox{
+  margin-right: 5%;
+}
+
+.addTaskInput {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+
+.buttonPadding {
+  margin: 0% 0% 0% 2%;
+}
+
+.deleteContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.deleteButton {
+  width: 25%;
+  align-self: center;
+  white-space: nowrap;
+  margin:0 0 2% 0;
+}
+
+.strikethrough{
+  text-decoration: line-through;
 }

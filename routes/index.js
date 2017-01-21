@@ -18,15 +18,25 @@ router.post( '/', function( req, res, next ) {
 
 router.post( '/delete', function( req, res, next ) {
   const {idList} = req.body
+  console.log('idList', idList)
   db.removeTask(idList)
     .then(() => res.redirect('/'))
 })
 
-router.post( '/:id', function( req, res, next ) {
-  const id = req.params.id
-  const newTask = req.body.item
+router.post( '/edit', function( req, res, next ) {
+  console.log('edit');
+  const id = req.body.id
+  const newTask = req.body.newToDo
   db.updateItems(newTask, id)
     .then(() => res.redirect('/'))
+})
+
+router.post( '/toggle_complete', (request, response) => {
+  const id = request.body.itemId
+  const completed = request.body.completed
+  console.log("id: ", id, " completed: ", completed)
+  db.toggleComplete(id)
+    .then( result => response.json({ message: `${id} completed` }) )
 })
 
 module.exports = router;

@@ -1,25 +1,46 @@
-$(document).ready(function() {
+function clicky(i) {
 
-  $( '.clickedOn' ).click( function () {
-    $('.clickedOn').addClass('hidden');
-    $( '.edit' ).addClass('display');
+  let it = document.getElementById(`${i}`);
+
+  it.contentEditable = 'true';
+  it.addEventListener('keypress', function(e) {
+      let key = e.which || e.keyCode;
+      if (key === 13) {
+          it.setAttribute("contentEditable", "false")
+
+          fetch( `/edit`, {
+            method: 'POST',
+            body: JSON.stringify({ newToDo: it.innerText, id: i }),
+            headers: new Headers({
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            })
+          })
+        }
+    })
+}
+
+$(".toggleCompleteForm").submit(function(event) {
+
+
+});
+
+$(document).ready(function(){
+  $('.completeContainer').on('click','i', function(event){
+    $(this).toggleClass('completedGreen', 'uncompletedBlack')
+    //const itemId = $(this).parent('form').find('input[name="itemId"]')[0].value
+    const itemId = $(this)[0].dataset.id
+    a = $(this)
+    console.log('id::', itemId)
+    const data = {itemId: itemId}
+    $.ajax({
+      type: 'POST',
+      url: '/toggle_complete',
+      data: data,
+      success: function(data){
+        //do something with the data via front-end framework
+        console.log('toggle success!')
+      }
+    });
   });
-
-
-  // $('.item__toggle').on('click', function(){
-  //     var item = $('form .input-new-item');
-  //     var todo = {item: item.val()};
-  //
-  //     $.ajax({
-  //       type: 'POST',
-  //       url: '/todo',
-  //       data: todo,
-  //       success: function(data){
-  //         //do something with the data via front-end framework
-  //         location.reload();
-  //       }
-  //     });
-  //     return false;
-  // });
-
 });
