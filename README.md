@@ -39,7 +39,7 @@ The artifact produced is properly licensed, preferably with the [Set artifact](h
 | Mon | Tues | Wed | Thurs | Fri | Sat |Sun|
 ------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------
 ||Setup environment; setup database |Setup template and routes to create and update| Set up route to delete, improve front end; checkoff items as complete|Continue with delete and completed items||
-  Time|0 hrs|5 hrs|5 hrs|0 hrs|0 hrs|TBD|TBD
+  Time|0 hrs|5 hrs|5 hrs|5 hrs|5 hrs|TBD|TBD
 
 
 
