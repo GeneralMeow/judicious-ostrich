@@ -1,23 +1,27 @@
 extends layout
 
 block content
-  h1= title
-  p Simple Todo List Application
   .wrapper
-    form.addTaskInput(method='POST', action='/')
-      input(type='text', name='item', placeholder='Add Task')
-      button.buttonPadding(type='submit') Submit
-    form.deleteContainer(method='POST', action='/delete')
-      button.deleteButton(type="submit") Delete Items
-      ul
-        for val in todoList
-          #listToggle
-            .checkBoxContainer.rowWidth
-              input.checkBox(type = 'checkbox', id='checkbox'+val.id, name="idList", value=val.id)
-            #clickedOn.item(data-id=val.id)
-              .clickedOn.item__heading(data-id=val.id, data-completed=val.is_complete)
+    #title.h1= title
+    #subTitle.p Simple Todo List Application
+      form.addTaskInput(method='POST', action='/')
+        input(type='text', name='item', placeholder='Add Task')
+        .woody.button.buttonPadding(type='submit') Submit
+      form.deleteContainer(method='POST', action='/delete')
+        button.deleteButton(type="submit") Delete Items
+        ul
+          for val in todoList
+            #listToggle
+              .checkBoxContainer.rowWidth
+                input.checkBox(type = 'checkbox', id='checkbox'+val.id, name='idList', value=val.id)
+              #clickedOn.item(data-id=val.id)
                 .clickedOn.item__title(data-id=val.id, data-completed=val.is_complete, class={completed: val.is_complete})
-            .taskContainer.rowWidth
-              label.clickedOn.span(id=val.id, onclick="clicky("+val.id+")")=val.task
-            .completeContainer.rowWidth
-              i.fa.fa-check-circle-o(id="checkmark-"+task.id, aria-hidden='fa')
+              .taskContainer.rowWidth
+                label.clickedOn.span(id=val.id, onclick="clicky("+val.id+")")=val.task
+              .completeContainer.rowWidth
+                form.toggleCompleteForm(action='/toggle_complete', method='POST')
+                  input(type='hidden', name='itemId', value=val.id)
+                  if val.is_complete
+                    i.fa.fa-check-circle-o(id="checkmark"+val.id,data-id=val.id, aria-hidden='fa', class='completedGreen')
+                  else
+                    i.fa.fa-check-circle-o(id="checkmark"+val.id,data-id=val.id, aria-hidden='fa', class='uncompletedBlack')

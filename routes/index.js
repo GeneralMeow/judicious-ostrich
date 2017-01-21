@@ -18,6 +18,7 @@ router.post( '/', function( req, res, next ) {
 
 router.post( '/delete', function( req, res, next ) {
   const {idList} = req.body
+  console.log('idList', idList)
   db.removeTask(idList)
     .then(() => res.redirect('/'))
 })
@@ -30,11 +31,11 @@ router.post( '/edit', function( req, res, next ) {
     .then(() => res.redirect('/'))
 })
 
-router.post( '/completed', (request, response) => {
-  const { id } = request.params
-  const { completed } = request.body
-
-  db.updateCompletion( id, completed )
+router.post( '/toggle_complete', (request, response) => {
+  const id = request.body.itemId
+  const completed = request.body.completed
+  console.log("id: ", id, " completed: ", completed)
+  db.toggleComplete(id)
     .then( result => response.json({ message: `${id} completed` }) )
 })
 
