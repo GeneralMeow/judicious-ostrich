@@ -20,12 +20,12 @@ function clicky(i) {
     })
 }
 
-$(".toggleCompleteForm").submit(function(event) {
+$(document).ready( function ( ) {
 
+  $('.woody').on('click', function ( ) {
+      $('.addTaskInput').submit();
+    })
 
-});
-
-$(document).ready(function(){
   $('.completeContainer').on('click','i', function(event){
     $(this).toggleClass('completedGreen', 'uncompletedBlack')
     //const itemId = $(this).parent('form').find('input[name="itemId"]')[0].value

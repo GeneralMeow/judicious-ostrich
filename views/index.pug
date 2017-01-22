@@ -5,8 +5,8 @@ block content
     #title.h1= title
     #subTitle.p Simple Todo List Application
       form.addTaskInput(method='POST', action='/')
-        input(type='text', name='item', placeholder='Add Task')
-        .woody.button.buttonPadding(type='submit') Submit
+        input(type='text', name='item', placeholder='Add new task')
+        .woody.buttonPadding(type="submit") Ok
       form.deleteContainer(method='POST', action='/delete')
         button.deleteButton(type="submit") Delete Items
         ul

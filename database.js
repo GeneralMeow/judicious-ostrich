@@ -29,4 +29,4 @@ const toggleComplete = (id) => {
 }
 
 
-  module.exports = { getAllItems, addItem, removeTask, updateItems, updateCompletion, toggleComplete, }
+  module.exports = { getAllItems, addItem, removeTask, updateItems, updateCompletion, toggleComplete }
