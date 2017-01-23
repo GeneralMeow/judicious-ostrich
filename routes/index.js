@@ -29,4 +29,10 @@ router.post( '/:id', function( req, res, next ) {
     .then(() => res.redirect('/'))
 })
 
+router.post('/rearrange', function( request, response, next){
+
+  db.rearrangeItems(100, 5)
+    .then(() => res.redirect('/'))
+})
+
 module.exports = router;
