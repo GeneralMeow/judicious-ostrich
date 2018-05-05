@@ -18,6 +18,24 @@ A full stack to do list web app.
 - [x] Write the app using ES6.
 - [ ] Deploy the app to heroku/AWS.
 
+## Running This Demo Locally on Your Machine
+
+### 1. Install dependencies
+
+```bash
+$ npm install
+```
+
+### 2. Start the App
+
+```bash
+$ npm start
+```
+
+### 3. Launch it on Browser
+
+Go to [http://localhost:3000](http://localhost:3000) and starting checking off your to-do list!
+
 <!-- LICENSE -->
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
