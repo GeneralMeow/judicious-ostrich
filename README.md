@@ -12,12 +12,6 @@ A full stack to do list web app.
 - [x] Create the front end using Pug.
 - [x] Create a database of to do list items using PostgreSQL.
 
-### Stretch Goals:
-- [ ] I can create multiple lists of to do's.
-- [ ] I can log into my account.
-- [x] Write the app using ES6.
-- [ ] Deploy the app to heroku/AWS.
-
 ## Running This Demo Locally on Your Machine
 
 ### 1. Install dependencies
